@@ -1,5 +1,5 @@
 [BITS 16]
-[ORG 0x7c00]	;First instruction adress
+[ORG 0x7c00]	;First instruction address
 
 global loader
 
