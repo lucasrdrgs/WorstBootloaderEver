@@ -54,7 +54,7 @@ reset_drive:
 
   jmp 0x08:clear_pipe32 ; go to 32-bit code
 
-;section .data ; this was added
+;section .data
 [BITS 32]
 clear_pipe32:
   mov ax , 0x10   
@@ -75,6 +75,8 @@ clear_pipe32:
   mov byte [0xB8000+4], 89
   mov byte [0xB8000+5], 0x1B
   jmp $
+
+; feel free to edit the code to use 64 bits instead of 32
 
 [BITS 64]
 clear_pipe64:
