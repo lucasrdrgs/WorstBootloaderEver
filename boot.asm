@@ -42,7 +42,7 @@ reset_drive:
 	or ah, ah
 	jnz reset_drive
 
-  cli ; disable iterrupts
+  cli ; disable interrupts
 
   ; set the ds register
   xor ax, ax
