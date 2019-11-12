@@ -1,10 +1,13 @@
+; You're probably not going to understand a single thing about this code.
+; I can't either. Don't touch it though, it works!
+
 [BITS 16]
-[ORG 0x7c00]	;First instruction address
+[ORG 0x7c00]
 
 global loader
 
 mov ax, 0x0003  ; 80x25 16color mode
-int 0x10		; video interrupt
+int 0x10	; video interrupt
 
 xor ax, ax
 mov ah, 0x01
@@ -35,7 +38,7 @@ reset_drive:
 	mov ah, 0x02
 	mov al, 0x0A
 	int 0x13 ; to the designer of this interruption:
-			 ; i fucking hate you
+		 ; i fucking hate you
 	or ah, ah
 	jnz reset_drive
 
@@ -93,7 +96,8 @@ clear_pipe64:
   mov byte [0xB8000], 88
   mov byte [0xB8000+1], 0x1B
 
-  ;call qword 0x08:0x01000 ; go to C code
+  ; I commented the thingy below because I don't want 64 bits right now.
+  ; call qword 0x08:0x01000 ; go to C code
 
   mov byte [0xB8000+4], 89
   mov byte [0xB8000+5], 0x1B
