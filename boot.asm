@@ -37,7 +37,7 @@ reset_drive:
 	mov cl, 0x02
 	mov ah, 0x02
 	mov al, 0x0A
-	int 0x13 ; to the designer of this interruption:
+	int 0x13 ; to the designer of this interrupt:
 		 ; i fucking hate you
 	or ah, ah
 	jnz reset_drive
