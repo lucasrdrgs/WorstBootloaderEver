@@ -60,14 +60,14 @@ reset_drive:
 ;section .data
 [BITS 32]
 clear_pipe32:
-  mov ax , 0x10   
-  mov ds , ax          
-  mov ss , ax          
-  mov es , ax
-  mov fs , ax
-  mov gs , ax
-  mov ebp , 0x90000
-  mov esp , ebp
+  mov ax, 0x10   
+  mov ds, ax          
+  mov ss, ax          
+  mov es, ax
+  mov fs, ax
+  mov gs, ax
+  mov ebp, 0x90000
+  mov esp, ebp
 
   mov byte [0xB8000], 88
   mov byte [0xB8000+1], 0x1B
@@ -84,14 +84,14 @@ clear_pipe32:
 [BITS 64]
 clear_pipe64:
   ; set segment registers
-  mov ax , 0x10   
-  mov ds , ax          
-  mov ss , ax          
-  mov es , ax
-  mov fs , ax
-  mov gs , ax
-  mov ebp , 0x90000    
-  mov esp , ebp
+  mov ax, 0x10   
+  mov ds, ax          
+  mov ss, ax          
+  mov es, ax
+  mov fs, ax
+  mov gs, ax
+  mov ebp, 0x90000    
+  mov esp, ebp
 
   mov byte [0xB8000], 88
   mov byte [0xB8000+1], 0x1B
